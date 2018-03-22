@@ -103,7 +103,7 @@ async function run () {
     }
 
     if (!options.steam) {
-      steam.detectRoot(true)
+      await steam.detectRoot(true)
       options.steam = steam.paths.rootPath
     } else {
       steam.setRoot(path.join(options.steam))

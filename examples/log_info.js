@@ -22,7 +22,7 @@ async function run () {
   try {
     if (!options.steam) {
       console.info('Trying to find default path to Steam...')
-      steam.detectRoot(true)
+      await steam.detectRoot(true)
     } else {
       steam.setRoot(path.join(options.steam))
     }

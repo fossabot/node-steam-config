@@ -21,7 +21,7 @@ let steam = new SteamConfig()
 async function run () {
   if (options.steam === null) {
     console.info('Trying to find default path to Steam...')
-    steam.detectRoot(true)
+    await steam.detectRoot(true)
   } else {
     steam.setRoot(path.join(options.steam))
   }
