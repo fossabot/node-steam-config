@@ -710,9 +710,9 @@ diff@3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
 
-doccomment@^0.0.2-rc4:
-  version "0.0.2-rc4"
-  resolved "https://registry.yarnpkg.com/doccomment/-/doccomment-0.0.2-rc4.tgz#60c1eee05221a5aeeff86a652e4f6b7114cd2711"
+doccomment@^0.0.2-rc6:
+  version "0.0.2-rc6"
+  resolved "https://registry.yarnpkg.com/doccomment/-/doccomment-0.0.2-rc6.tgz#12cd1d3ad5532ec02220923ad02d7a091ccf438e"
   dependencies:
     cli "^1.0.1"
 
