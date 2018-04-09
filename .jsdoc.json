@@ -1,33 +1,39 @@
 {
     "tags": {
-        "allowUnknownTags": true,
-        "dictionaries": ["jsdoc"]
+        "allowUnknownTags": false,
+        "dictionaries": [
+          "jsdoc", "closure"
+        ]
     },
     "source": {
         "include": [
           "./package.json",
           "./README.md",
-          "./lib/index.js",
-          "./lib/steamPaths.js",
-          "./lib/steamUtils.js"
-        ]
+          "./src/index.js",
+          "./src/steamPaths.js",
+          "./src/steamUtils.js"
+        ],
+        "excludePattern": "(asyncLib|bvdf|cleanSteam)"
     },
     "plugins": [
       "plugins/markdown"
     ],
     "templates": {
+        "footer": "",
         "referenceTitle": "SteamConfig API",
         "disableSort": true,
+        "navType": "inline",
+        "inverseNav": true,
         "monospaceLinks": true,
-        "default": {
-          "includeDate": false,
-          "outputSourceFiles": false
-        },
-        "theme": "cyborg"
+        "includeDate": false,
+        "collapseSymbols": true,
+        "outputSourceFiles": false,
+        "outputSourcePath": false,
+        "sort": false
     },
     "opts": {
+      "template": "./node_modules/ink-docstrap/template",
       "destination": "./docs/",
-      "encoding": "utf8",
       "recurse": false
     }
 }
