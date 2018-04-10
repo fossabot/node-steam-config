@@ -1,9 +1,9 @@
-# **`SteamConfig`** API Documentation<br />Version `0.0.2-rc6`
+# **`SteamConfig`** API Documentation<br />Version `0.0.2-rc7`
 
 ## ------------
 ### **Table of Contents**
 * `Module` [SteamConfig](#module-steamconfig)
- * [Properties](#module-steamconfig-properties)
+  * [Properties](#module-steamconfig-properties)
    * [append](#steamconfig-append)
    * [paths](#steamconfig-paths)
    * [appinfo](#steamconfig-appinfo)
@@ -13,7 +13,7 @@
    * [loginusers](#steamconfig-loginusers)
    * [skins](#steamconfig-skins)
    * [apps](#steamconfig-apps)
- * [Methods](#module-steamconfig-methods)
+  * [Methods](#module-steamconfig-methods)
    * `async` [findUser (identifier)](#steamconfig-finduser)
    * `async` [load (files)](#steamconfig-load)
    * `async` [save (files)](#steamconfig-save)
@@ -22,7 +22,7 @@
    * `async` [setRoot (to)](#steamconfig-setroot)
    * `async` [setUser (to)](#steamconfig-setuser)
 * `Module` [SteamPaths](#module-steampaths)
- * [Properties](#module-steampaths-properties)
+  * [Properties](#module-steampaths-properties)
    * [root](#steampaths-root)
    * [id64](#steampaths-id64)
    * [accountId](#steampaths-accountid)
@@ -36,11 +36,11 @@
    * [sharedconfig](#steampaths-sharedconfig)
    * [shortcuts](#steampaths-shortcuts)
    * [skins](#steampaths-skins)
- * [Methods](#module-steampaths-methods)
+  * [Methods](#module-steampaths-methods)
    * [app (id, library)](#steampaths-app)
    * [steamapps (library)](#steampaths-steamapps)
 * `Module` [SteamUtils](#module-steamutils)
- * [Methods](#module-steamutils-methods)
+  * [Methods](#module-steamutils-methods)
    * [getAccountIdFromId64 (id64)](#steamutils-getaccountidfromid64)
    * `async` [requestWithCache (id64, force, cache, site)](#steamutils-requestwithcache)
    * `async` [requestOwnedApps (id64, force, cache)](#steamutils-requestownedapps)
@@ -79,7 +79,7 @@
 ## ------------
 
 <a name='steamconfig-finduser'></a>
-#### `async`  findUser (identifier) 
+#### `async`  findUser (identifier)
 
 Attempt to find the user `identifier`.
 > **Arguments**
@@ -95,7 +95,7 @@ Attempt to find the user `identifier`.
 ## ------------
 
 <a name='steamconfig-load'></a>
-#### `async`  load (files) 
+#### `async`  load (files)
 
 Load Steam configuration data files by path and store the data in it's place on SteamConfig. The internal function beforeLoad is used to organize the entries to ensure proper load order. The internal function afterLoad is run on each file after it's been loaded to automatically handle cleaning some of the data such as the useless values in `libraryfolders.vdf` and `loginusers.vdf`.
 > **Arguments**
@@ -111,7 +111,7 @@ Load Steam configuration data files by path and store the data in it's place on 
 ## ------------
 
 <a name='steamconfig-save'></a>
-#### `async`  save (files) 
+#### `async`  save (files)
 
 Save Steam configuration data files by path.
 > **Arguments**
@@ -127,7 +127,7 @@ Save Steam configuration data files by path.
 ## ------------
 
 <a name='steamconfig-detectroot'></a>
-#### `async`  detectRoot (auto = false) 
+#### `async`  detectRoot (auto = false)
 
 Attempt to detect the root installation path based on platform-specific default installation locations, or the value SteamPath from the registry on Windows. Will also set the path if autoSet is true.
 > **Arguments**
@@ -148,7 +148,7 @@ Attempt to detect the root installation path based on platform-specific default 
 ## ------------
 
 <a name='steamconfig-detectuser'></a>
-#### `async`  detectUser (auto = false) 
+#### `async`  detectUser (auto = false)
 
 Attempt to detect the user of the Steam installation from (in order) the active user, the mostrecent user, or the only user.
 > **Arguments**
@@ -169,7 +169,7 @@ Attempt to detect the user of the Steam installation from (in order) the active 
 ## ------------
 
 <a name='steamconfig-setroot'></a>
-#### `async`  setRoot (to) 
+#### `async`  setRoot (to)
 
 Attempt to set the root path of the Steam installation.
 > **Arguments**
@@ -185,7 +185,7 @@ Attempt to set the root path of the Steam installation.
 ## ------------
 
 <a name='steamconfig-setuser'></a>
-#### `async`  setUser (to) 
+#### `async`  setUser (to)
 
 Attempt to set the root path of the Steam installation.
 > **Arguments**
@@ -236,7 +236,7 @@ Attempt to set the root path of the Steam installation.
 ## ------------
 
 <a name='steampaths-app'></a>
-####  app (id, library) 
+####  app (id, library)
 
 Get the path to a Steam app.
 > **Arguments**
@@ -250,7 +250,7 @@ Get the path to a Steam app.
 ## ------------
 
 <a name='steampaths-steamapps'></a>
-####  steamapps (library) 
+####  steamapps (library)
 
 Get the paths to all of the Steam apps in a Steam Library Folder.
 > **Arguments**
@@ -273,7 +273,7 @@ Get the paths to all of the Steam apps in a Steam Library Folder.
 ## ------------
 
 <a name='steamutils-getaccountidfromid64'></a>
-####  getAccountIdFromId64 (id64) 
+####  getAccountIdFromId64 (id64)
 
 Get the Steam3::account ID from a Steam ID64 value.
 > **Arguments**
@@ -297,7 +297,7 @@ Get the Steam3::account ID from a Steam ID64 value.
 ## ------------
 
 <a name='steamutils-requestwithcache'></a>
-#### `async`  requestWithCache (id64, force, cache, site) 
+#### `async`  requestWithCache (id64, force, cache, site)
 
 Request a webpage and optionally cache results.
 > **Arguments**
@@ -330,7 +330,7 @@ Request a webpage and optionally cache results.
 ## ------------
 
 <a name='steamutils-requestownedapps'></a>
-#### `async`  requestOwnedApps (id64, force, cache) 
+#### `async`  requestOwnedApps (id64, force, cache)
 
 Request the list of owned apps on Steam for a given Steam ID64.
 > **Arguments**
@@ -360,7 +360,7 @@ Request the list of owned apps on Steam for a given Steam ID64.
 ## ------------
 
 <a name='steamutils-requesttags'></a>
-#### `async`  requestTags (force, cache) 
+#### `async`  requestTags (force, cache)
 
 Request the list of popular tags on Steam.
 > **Arguments**
@@ -384,7 +384,7 @@ Request the list of popular tags on Steam.
 ## ------------
 
 <a name='steamutils-requestgenres'></a>
-#### `async`  requestGenres (appid, force, cache) 
+#### `async`  requestGenres (appid, force, cache)
 
 Request the list of genres for an app on Steam.
 > **Arguments**
